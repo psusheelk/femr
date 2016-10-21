@@ -31,6 +31,7 @@ public class IndexViewModelPost {
     private String city;
     private Date age;
     private String ageClassification;
+     private Integer fakeBDFlag;
     private String sex;
     public Boolean deletePhoto; //flag to determine if user would like to delete image file
     //begin vitals
@@ -56,6 +57,13 @@ public class IndexViewModelPost {
 
 
     private String patientPhotoCropped;
+    public Integer getFakeBDFlag() {
+        return fakeBDFlag;
+    }
+
+    public void setFakeBDFlag(Integer fakeBDFlag) {
+        this.fakeBDFlag = fakeBDFlag;
+    }
 
     public String getPatientPhotoCropped() {
         return patientPhotoCropped;
