@@ -165,6 +165,7 @@ public class ItemModelMapper implements IItemModelMapper {
                                                 String address,
                                                 int userId,
                                                 Date age,
+												Integer fakeBDFlag,
                                                 String sex,
                                                 Integer weeksPregnant,
                                                 Integer heightFeet,

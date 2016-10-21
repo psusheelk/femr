@@ -44,6 +44,8 @@ public interface IPatient {
 
     void setAge(Date age);
 
+ 	Integer getFakeBDFlag();
+    void setFakeBDFlag(Integer fakeBDFlag);    
     String getSex();
 
     void setSex(String sex);

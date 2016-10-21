@@ -57,6 +57,28 @@
                 </div>
 
 
+<div class="generalInfoInput">
+
+                            <label>The patient's Real birthday is unknown creating Fake Birthday</label>
+                        @if(viewModel.getPatient.getFakeBDFlag == null) {
+
+                            <input type="radio" name="fakeBDFlag" value="0" /> Real
+                            <input type="radio" name="fakeBDFlag" value="1" checked="true"/> Fake
+
+
+                        } else{
+                            @if(viewModel.getPatient.getFakeBDFlag == 0) {
+                                <input type="radio" name="fakeBDFlag" value="0" checked="true"/> Real
+                                <input type="radio" name="fakeBDFlag" value="1" /> Fake
+                            }  else {''
+
+                            <input type="radio" name="fakeBDFlag" value="0" /> Real
+                            <input type="radio" name="fakeBDFlag" value="1" checked="true"/> Fake
+                            }
+
+                        }
+                     </div>
+
                 <div id="ageClassificationWrap">
                     <label>Age<span class="red bold">*</span></label>
                     @inputAge("Age", "Years", "years", "Months", "months", if(viewModel != null) viewModel.getPatient else null)
@@ -146,7 +168,7 @@
                             </div>
                         </div>
                         <div class="vitalWrap">
-                            <label for="heartRate">Heart Rate</label>
+                            <kelabel for="heartRate">Heart Rate</kelabel>
                             <input type="number" step="number" min="0" class="fInput" id="@viewModel.getVitalNames.get(1).getName" name="@viewModel.getVitalNames.get(1).getName" placeholder="bpm"/>
                         </div>
 
