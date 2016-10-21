@@ -40,6 +40,8 @@ public class Patient implements IPatient {
     private String lastName;
     @Column(name = "age")
     private Date age;
+    @Column(name = "fakebdflag", nullable = true)
+    private Integer fakeBDFlag;
     @Column(name = "sex", nullable = true)
     private String sex;
     @Column(name = "address", nullable = true)
@@ -58,6 +60,16 @@ public class Patient implements IPatient {
     @Column(name = "reason_deleted", nullable = true)
     private String reasonDeleted;
 
+
+    @Override
+    public Integer getFakeBDFlag() {
+        return fakeBDFlag;
+    }
+
+    @Override
+    public void setFakeBDFlag(Integer fakeBDFlag) {
+        this.fakeBDFlag = fakeBDFlag;
+    }
 
     @Override
     public int getId() {
@@ -103,6 +115,8 @@ public class Patient implements IPatient {
     public void setAge(Date age) {
         this.age = age;
     }
+
+
 
     @Override
     public String getSex() {
